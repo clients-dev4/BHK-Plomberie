@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:/Users/Webpr/Desktop/E-Commerce_/Sociaux_3/instaaboost.fr/\"*.php)",
+      "Bash(ls \"C:/Users/Webpr/Desktop/E-Commerce_/YouTube_8/abonnees-kopen.com/\"*.php)",
+      "Bash(py -c \":*)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Webpr\\Desktop\\E-Commerce_\\Sociaux_3\\acheter-abonnes-insta.com",
+      "C:\\Users\\Webpr\\Desktop\\E-Commerce_\\Sociaux_3\\instaaboost.fr"
+    ]
+  }
+}
