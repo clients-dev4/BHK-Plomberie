@@ -278,15 +278,12 @@
             <div class="image-container">
                 <img src="bhk-logo.webp" alt="entreprise de plomberie 69 Rhône">
             </div>
-            <form id="contactForm" action="https://formsubmit.co/bhk.pro69@gmail.com" method="POST" onsubmit="return sendBoth(event)">
+            <form id="contactForm" action="https://webprime.app/webhook/contact/494264a4a16eedd23888f026df1e7893e3401dbd1d7c41f48f7ffb908aed7186" method="POST" onsubmit="return sendBoth(event)">
                 <!-- Honeypot anti-spam -->
                 <div class="hp-wrap">
                     <label for="website">Votre site web :</label>
                     <input type="text" id="website" name="_honey" autocomplete="off">
                 </div>
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_subject" value="Formulaire">
 
                 <label for="name">Nom :</label>
                 <input type="text" id="name" name="nom" required>
@@ -442,12 +439,6 @@
             body: webhookData,
             keepalive: true
         }).catch(function() {});
-        var p2 = fetch('https://formsubmit.co/ajax/bhk.pro69@gmail.com', {
-            method: 'POST',
-            body: new FormData(form),
-            keepalive: true,
-            headers: { 'Accept': 'application/json' }
-        }).catch(function() {});
         var shown = false;
         var showThanks = function() {
             if (shown) return;
@@ -456,7 +447,7 @@
             var thanks = document.getElementById('contactThanks');
             if (thanks) thanks.style.display = 'block';
         };
-        Promise.allSettled([p1, p2]).then(showThanks);
+        Promise.allSettled([p1]).then(showThanks);
         setTimeout(showThanks, 3000);
         return false;
     }
